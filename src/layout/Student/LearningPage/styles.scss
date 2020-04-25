@@ -1,0 +1,55 @@
+.student-learning{
+  height: 100vh;
+
+  .panel{
+    margin-top: 16px;
+    justify-content: space-between;
+
+  }
+
+  .left-box{
+    //padding: 8px;
+    //border: 1px solid black;
+    //border-radius: 8px;
+    //margin-left: 10%;
+  }
+
+  .right-box{
+    //margin-right: 10%;
+    //margin: 8px;
+    //padding: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+
+  .dropdown-bar{
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+
+    .bar-header{
+      border-bottom: 1px solid black;
+      padding-bottom: 8px;
+      background-color: #282c34;
+      color: #D3D3D3;
+      font-size: 28px;
+    }
+
+    .bar-option{
+      background-color: #FFFFFF;
+      font-size: 20px;
+      //height: 50px;
+
+      &:not(:last-child){
+        //margin: 8px;
+      }
+
+      &:not(:last-child){
+        border-bottom: 1px solid black;
+        //padding-bottom: 8px;
+      }
+    }
+
+  }
+}

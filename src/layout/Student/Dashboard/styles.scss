@@ -1,0 +1,37 @@
+.student-dashboard{
+  height: 100vh;
+  background-color: #E5E5E5;
+
+  .row{
+    .info-box{
+      background-color: #FFFFFF;
+      //border: 1px solid black;
+      border-radius: 8px;
+      padding: 8px;
+      //height: 80px;
+
+      .box-header{
+        //color: #2688DA;
+        font-weight: 800;
+        border-bottom: 1px solid black;
+        padding-bottom: 4px;
+      }
+
+      .box-content{
+        display: block;
+
+        .name{
+          font-size: 21px;
+          color: #2688DA;
+          font-weight: 800;
+        }
+
+        p{
+          margin: 0;
+        }
+      }
+
+    }
+  }
+
+}

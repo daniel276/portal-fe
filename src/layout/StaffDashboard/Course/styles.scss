@@ -1,0 +1,23 @@
+.course-page{
+  margin-top: 32px;
+
+  .course-panel{
+    padding: 12px;
+    min-height: 400px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    text-align: left;
+
+    .course-header{
+      border-bottom: 1px solid black;
+      font-size: 26px;
+      padding: 8px;
+    }
+
+    .course-table{
+      padding: 8px;
+    }
+  }
+
+}

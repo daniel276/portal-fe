@@ -1,0 +1,41 @@
+.staff-dashboard{
+
+  .row{
+    &:not(:last-child){
+      margin-bottom: 32px;
+    }
+  }
+
+  .panel{
+    text-align: left;
+    padding: 8px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 100%;
+    //border: 1px solid black;
+
+    .panel-header{
+      font-size: 25px;
+      padding: 12px;
+      border-bottom: 1px solid black;
+    }
+
+    .panel-content{
+      padding: 8px;
+    }
+
+    .navigation-button{
+      font-size: 18px;
+
+      &:hover{
+        background-color: whitesmoke;
+        cursor: pointer;
+      }
+      &:not(:last-child){
+        margin-bottom: 4px;
+        border-bottom: 1px solid black;
+    }
+    }
+
+  }
+}
