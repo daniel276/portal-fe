@@ -1,0 +1,28 @@
+.attendance{
+  display: block;
+  .header{
+    text-align: center;
+    background-color: inherit;
+    font-weight: 300;
+  }
+
+  .course-panel{
+    padding: 12px;
+    width: 100%;
+
+    .header-panel{
+      font-size: 21px;
+      border-bottom: 1px solid #282c34;
+      padding: 1rem 1rem;
+    }
+    .classes-panel{
+
+    }
+  }
+
+  p{
+    width: 100%;
+    margin: 0;
+  }
+
+}

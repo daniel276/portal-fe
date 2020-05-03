@@ -3,17 +3,22 @@
   background-color: #E5E5E5;
 
   .row{
+    &:not(:last-child){
+      margin-top: 32px;
+    }
+
     .info-box{
-      background-color: #FFFFFF;
+      text-align: center;
+      background-color: whitesmoke;
       //border: 1px solid black;
       border-radius: 8px;
       padding: 8px;
-      //height: 80px;
 
       .box-header{
         //color: #2688DA;
-        font-weight: 800;
-        border-bottom: 1px solid black;
+        font-weight: 600;
+        font-size: 24px;
+        border-bottom: 1px solid #dee2e6;
         padding-bottom: 4px;
       }
 
@@ -26,8 +31,53 @@
           font-weight: 800;
         }
 
+        .image-block{
+          img{
+            max-height: 150px;
+            max-width: 150px;
+          }
+        }
+
         p{
           margin: 0;
+        }
+      }
+
+      .courses-list{
+        display: block;
+
+        .box-header{
+          border-bottom: 1px solid #D3D3D3;
+        }
+
+        .course {
+          &:hover{
+            background-color: gainsboro;
+            cursor: pointer;
+          }
+
+          display: grid;
+          text-align: left;
+          margin-top: 4px;
+
+          &:not(:last-child){
+            border-bottom: 1px solid #dee2e6;
+            padding: 4px;
+          }
+
+          .course-title{
+
+          }
+
+          .course-desc{
+
+          }
+
+          //display: flex;
+        }
+
+        .box-content{
+
         }
       }
 

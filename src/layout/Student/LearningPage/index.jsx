@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import "./styles.scss";
-import {Route, NavLink } from "react-router-dom";
+import {Route, NavLink, Redirect } from "react-router-dom";
 import Courses from "../Learning/Courses";
 import Attendance from "../Learning/Attendance";
+import ModuleEnrollment from "../ModuleEnrollment";
 
 class Learning extends Component {
   render() {
@@ -15,16 +16,21 @@ class Learning extends Component {
                   Learning
                 </div>
                 <div className="bar-option">
-                  <a><NavLink to="/learning/courses">Courses</NavLink></a>
+                  <NavLink className="nav-link" to="/student/learning/course">Courses</NavLink>
                 </div>
                 <div className="bar-option">
-                  <a><NavLink to="/learning/attendance">Attendance</NavLink></a>
+                  <NavLink className="nav-link" to="/student/learning/attendance">Attendance</NavLink>
+                </div>
+                <div className="bar-option">
+                  <NavLink className="nav-link" to="/student/learning/enrollment">Enrollment</NavLink>
                 </div>
               </div>
             </div>
             <div className="col-md-8 right-box">
-              <Route path={"/learning/courses"} component={Courses} />
-              <Route path="/learning/attendance" component={Attendance}/>
+              <Route exact path={["/student/learning/course", "/student/learning"]} component={Courses} />
+              <Route exact path={"/student/learning/attendance"} component={Attendance}/>
+              <Route exact path="/student/learning/enrollment" component={ModuleEnrollment}/>
+              <Redirect exact from="/student/learning" to="/student/learning/course" />
             </div>
           </div>
         </div>

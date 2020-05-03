@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./styles.scss";
 import { connect } from "react-redux";
 import { logout } from "../../../actions/securityActions";
@@ -26,8 +26,8 @@ class Header extends Component {
               <a href="/" className="navbar-brand">{user.firstName} {user.lastName} | {user.id}</a>
             </div>
             <div className="right">
-              <a href="/" className="navbar-brand">Profile</a>
-              <a className="navbar-brand"><NavLink to="/learning/courses">Courses</NavLink></a>
+              <NavLink to="/student/account" className="navbar-brand">Profile</NavLink>
+              <NavLink className="navbar-brand" to="/student/learning/course">Courses</NavLink>
             </div>
           </nav>
 
@@ -36,10 +36,10 @@ class Header extends Component {
               <h3>Student Portal</h3>
             </div>
             <div className="navigation">
-              <a><NavLink to="/student/">Dashboard</NavLink></a>
-              <a><NavLink to="/student/learning">Learning</NavLink></a>
-              <a><NavLink to="/student/account">Account</NavLink></a>
-              <a><Link onClick={this.logout}>Log out</Link></a>
+              <NavLink className="nav-link" to="/student/">Dashboard</NavLink>
+              <NavLink className="nav-link" to="/student/learning">Learning</NavLink>
+              <NavLink className="nav-link" to="/student/account">Account</NavLink>
+              <NavLink className="nav-link" to="/" onClick={this.logout}>Log out</NavLink>
             </div>
           </div>
 

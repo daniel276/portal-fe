@@ -1,17 +1,15 @@
-import setJWTToken from "../securityUtils/setJWTToken";
+import {GET_ALL_USER} from "../actions/types";
+
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 
 const initialState = {
   user: {},
-  validToken: false
+  users: [],
+  validToken: false // this is used as a flag
 };
 
 const booleanActionPayload = (payload) => {
-  if(payload){
-    return true
-  }else{
-    return false
-  }
+  return !!payload; // if there is any payload, set validToken to true
 };
 
 export default function(state = initialState, action){
@@ -23,16 +21,13 @@ export default function(state = initialState, action){
         user: action.payload
       };
 
+    case GET_ALL_USER:
+      return{
+        ...state,
+        users: action.payload
+      };
+
     default:
       return state;
   }
-};
-
-export const logout = () => dispatch => {
-  localStorage.removeItem("jwttoken");
-  setJWTToken(false);
-  dispatch({
-    type: SET_CURRENT_USER,
-    payload: {}
-  })
 };

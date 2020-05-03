@@ -3,6 +3,7 @@
     background-color: whitesmoke;
     border-radius: 8px;
     padding: 8px;
+    //max-height: 480px;
 
     .box-header {
       padding: 8px;
@@ -26,5 +27,11 @@
         }
       }
     }
+
+    &.user-table{
+      max-height: 479px;
+      overflow-y: scroll;
+    }
+
   }
 }

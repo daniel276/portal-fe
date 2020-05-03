@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Router, Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Header from "../Header";
 import Learning from "../LearningPage";
 import Dashboard from "../Dashboard";
@@ -11,8 +11,6 @@ class StudentPage extends Component {
     return (
           <div className="student-page" style={{backgroundColor: '#E5E5E5'}}>
             <Header/>
-            {/*<Dashboard/>*/}
-            {/*<Learning/>*/}
             <div className="content-page">
               <Route exact path="/student" component={Dashboard}/>
               <Route path="/student/learning" component={Learning}/>

@@ -27,11 +27,12 @@ class Login extends Component {
       password: this.state.password
     };
 
-    this.props.login(loginRequest);
+    this.props.login(loginRequest); // send
 
   };
 
   UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
+    // invoked before component receive new props, when new props received redirect user to appropriate page based on their role
     if(nextProps.security.validToken && nextProps.security.user.role === "STUDENT"){
       this.props.history.push("/student")
     }
@@ -39,9 +40,9 @@ class Login extends Component {
       this.props.history.push("/staff")
     }
 
-    if(nextProps.errors){
+    if(nextProps.errors){ // if error shows when user input wrong username/password
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors // put received errors from redux to this component state
       })
     }
   }
@@ -68,12 +69,11 @@ class Login extends Component {
             <form className="w-50 ml-auto mr-auto" onSubmit={this.onSubmit}>
               <div className="form-group ">
                 <input type="text" className="form-control form-control-lg" placeholder="username" name="username" onChange={this.onChange}/>
-              {/*  put errors validation here*/}
-              {/*  {errors.username && <div className="text-danger"><small>{errors.username}</small></div>}*/}
+                {errors.username && <div className="text-danger text-left"><small>{errors.username}</small></div>}
               </div>
               <div className="form-group">
                 <input type="password" className="form-control form-control-lg" placeholder="Password" name="password" onChange={this.onChange}/>
-                {/*{errors.password && <div className="text-danger"><small>{errors.password}</small></div>}*/}
+                {errors.password && <div className="text-danger text-left"><small>{errors.password}</small></div>}
               </div>
               <input type="submit" className="btn btn-primary btn-lg btn-block mt-4"/>
             </form>

@@ -2,11 +2,14 @@
 
   .left-row{
 
-    .profile-picture{
-      height: 200px;
-      width: 200px;
-      border: 1px solid black;
-      margin-left: auto;
+    .profile-picture-box{
+      text-align: right;
+      .profile-picture{
+        height: 200px;
+        width: 200px;
+        border: 1px solid whitesmoke;
+        border-radius: 100px;
+      }
     }
   }
 
@@ -15,19 +18,54 @@
     width: 100%;
     text-align: left;
     padding: 16px;
-    //height: 100px;
     background-color: whitesmoke;
     border-radius: 8px;
 
     .header{
+      display: flex;
+      justify-content: space-between;
       font-size: 24px;
       background-color: inherit;
       border-bottom: 1px solid black;
+
+      button{
+        align-self: baseline;
+      }
+
+      a{
+        margin-right: 10px;
+        cursor: pointer;
+      }
     }
     .content{
       margin-top: 8px;
-      //padding: 8px;
     }
+
+    .image-list-view{
+      overflow-y: scroll;
+      max-height: 220px;
+
+      .list{
+        &:not(:last-child){
+          margin-bottom: 5px;
+        }
+
+        &:hover{
+          background-color: #E5E5E5;
+        }
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 4px 8px;
+        border: 1px solid #dee2e6; // TODO BORDER COLOR
+        border-radius: 8px;
+        cursor: pointer;
+        p{
+          align-self: center;
+        }
+      }
+    }
+
   }
 
   .row .login{
@@ -40,6 +78,11 @@
     background-color: whitesmoke;
     border-radius: 8px;
 
+  }
+
+  label{
+    vertical-align: middle;
+    margin-bottom: 0;
   }
 
   p{

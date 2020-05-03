@@ -1,17 +1,23 @@
 import React, {Component} from 'react';
+import "./styles.scss";
 
 class Course extends Component {
+
   render() {
 
-    const { course } = this.props;
+    const { data } = this.props;
 
     return (
-        <div className="course-card">
-          <div className="course-title">
-            COMP3008 - Intro To Programming
+        <div className="course-card" key={data.id}>
+          <div className="course-header">
+            {data.code} - {data.name}
           </div>
-          <div className="content">
-            Testing 123
+          <div className="course-desc">
+            <p>Total Credit: {data.credit}</p>
+            <div className="date">
+              <p>Start Date: {data.startDate}</p>
+              <p>End Date: {data.endDate}</p>
+            </div>
           </div>
         </div>
     );

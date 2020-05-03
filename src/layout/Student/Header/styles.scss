@@ -35,11 +35,14 @@
    }
 
     .navigation{
+      display: flex;
       margin-right: 10%;
       font-size: 32px;
 
+
       a{
-        margin-right: 8px;
+        color: initial;
+        //margin-right: 8px;
       }
     }
   }

@@ -5,13 +5,11 @@ import Login from "../../components/Login";
 class Landing extends Component {
 
   componentDidMount() {
-    const isStaff = this.props.security.user.role === "STAFF";
-    const isAuth = this.props.security.validToken;
 
-    if(isAuth && isStaff){
+    if(this.props.security.user.role === "STAFF"){
       this.props.history.push("/staff")
     }
-    if(isAuth){
+    if(this.props.security.user.role === "STUDENT"){
       this.props.history.push("/student")
     }
   }
@@ -29,8 +27,8 @@ class Landing extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  security: state.security
+const mapStateToProps = state => ({ // select some data from the store and map into this component props
+  security: state.security // get security data from the store and map into this component state
 });
 
 export default connect(mapStateToProps)(Landing);
