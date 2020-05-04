@@ -150,7 +150,7 @@ class CoursePage extends Component {
                     </div>
 
                     <div className="form-group row">
-                      <label htmlFor="inputEmail3" className="col-sm-4 col-form-label">Start date</label>
+                      <label htmlFor="inputEmail3" className="col-sm-4 col-form-label">End date</label>
                       <div className="col-sm-6">
                         <input required type="date" className="form-control" name="endDate" value={this.state.endDate} onChange={this.handleChangeForm} id="inputEmail3" placeholder="end date"/>
                       </div>
