@@ -1,0 +1,37 @@
+.enrollment-page {
+  .box-container {
+    background-color: whitesmoke;
+    border-radius: 8px;
+    padding: 8px;
+    //max-height: 480px;
+
+    .box-header {
+      padding: 8px;
+      font-size: 26px;
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+
+    .box-content {
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+
+        input{
+          border-radius: 8px;
+        }
+
+        .input-group{
+          min-width: 200px;
+        }
+      }
+    }
+
+    &.user-table{
+      max-height: 479px;
+      overflow-y: scroll;
+    }
+
+  }
+}

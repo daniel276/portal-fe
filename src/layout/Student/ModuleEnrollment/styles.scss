@@ -1,0 +1,28 @@
+.module-enrollment{
+  .enrollment-panel{
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+
+  .module-card{
+    &:not(:last-child){
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    &:hover{
+      background-color: #E5E5E5;
+    }
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  p{
+    margin: 0;
+  }
+
+}

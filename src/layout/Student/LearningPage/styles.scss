@@ -1,0 +1,41 @@
+.student-learning{
+  height: 100vh;
+
+  .panel{
+    margin-top: 16px;
+    justify-content: space-between;
+
+  }
+
+  .dropdown-bar{
+    background-color: whitesmoke;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+
+    .bar-header{
+      border-bottom: 1px solid black;
+      padding-bottom: 8px;
+      //background-color: #e9ecef;
+      color: black;
+      font-size: 28px;
+    }
+
+    .bar-option{
+      &:hover{
+        background-color: gainsboro;
+      }
+      font-size: 20px;
+
+      a{
+        font-weight: 300;
+        color: black;
+      }
+
+      &:not(:last-child){
+        border-bottom: 1px solid black;
+      }
+    }
+
+  }
+}

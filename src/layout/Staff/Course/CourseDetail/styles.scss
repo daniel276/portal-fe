@@ -1,0 +1,32 @@
+.course-detail-page{
+  margin-top: 32px;
+
+  .course-title{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 36px;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+  }
+
+  .panel{
+    padding: 12px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+
+    .panel-header{
+      font-size: 24px;
+      font-weight: 400;
+      padding: 4px;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    &.classes-list{
+      overflow-x: scroll;
+    }
+  }
+
+  p{
+    margin: 0;
+  }
+}
