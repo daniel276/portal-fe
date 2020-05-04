@@ -6,7 +6,7 @@ export const recordAttendance = (username, class_id, history) => async dispatch 
   try {
     await axios.post(BASE_URL + `/attendance/record/${username}/${class_id}`)
         .then(function(response){
-          if(response.status === 201){
+          if(response.status === 200){
            history.push("/attendance/status/success")
           }
           // window.location.reload();
