@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { registerStudent, getAllAccounts, resetPassword } from "../../../actions/securityActions";
 import "./styles.scss";
 
-class Enrollment extends Component {
+class Enrolment extends Component {
 
   constructor(){
     super();
@@ -39,9 +39,7 @@ class Enrollment extends Component {
       dob: this.state.dob
     };
 
-    console.log('ok', enroll);
-
-    // this.props.registerStudent(enroll, this.props.history);
+    this.props.registerStudent(enroll, this.props.history);
 
   };
 
@@ -200,4 +198,4 @@ const mapStateToProps = state => ({
   users: state.security.users
 });
 
-export default connect(mapStateToProps, { registerStudent, getAllAccounts, resetPassword })(Enrollment);
+export default connect(mapStateToProps, { registerStudent, getAllAccounts, resetPassword })(Enrolment);

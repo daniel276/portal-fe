@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getModules, addStudentModule, getModulesByStudentId } from "../../../actions/moduleActions";
 import "./styles.scss";
 
-class ModuleEnrollment extends Component {
+class ModuleEnrolment extends Component {
 
   constructor(){
     super();
@@ -17,7 +17,7 @@ class ModuleEnrollment extends Component {
 
   componentDidMount() {
     this.props.getModules();
-    this.props.getModulesByStudentId(this.props.user.id); //TODO CHANGE TO STATE
+    this.props.getModulesByStudentId(this.props.user.id);
   }
 
   enrollStudentModule = module_id => e => {
@@ -50,15 +50,15 @@ class ModuleEnrollment extends Component {
     return (
         <div className="module-enrollment">
           <div className="jumbotron" style={{paddingTop: '2rem', paddingBottom:'2rem'}}>
-            <h1 className="display-4">Module Enrollment</h1>
-            <p className="lead">You can enroll for module(s) here if eligible </p>
+            <h1 className="display-4">Module Enrolment</h1>
+            <p className="lead">You can enrol for module(s) here if eligible </p>
           </div>
 
           <div className="enrollment-panel" style={{marginTop: '16px'}}>
             {filteredModule.length > 0 ? filteredModule.map((value) => (
               <div className="module-card" key={value.id}>
                 <p>{value.code} - {value.name} ({value.credit})</p>
-                <p><button className="btn btn-primary btn-sm" onClick={this.enrollStudentModule(value.id)}>Enroll</button></p>
+                <p><button className="btn btn-primary btn-sm" onClick={this.enrollStudentModule(value.id)}>Enrol</button></p>
               </div>
             )) :
                 <p className="text-center">No Module available</p>
@@ -80,4 +80,4 @@ export default connect(mapStateToProps,
       addStudentModule,
       getModulesByStudentId
     })
-(ModuleEnrollment);
+(ModuleEnrolment);

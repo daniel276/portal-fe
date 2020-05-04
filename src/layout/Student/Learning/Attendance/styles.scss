@@ -1,0 +1,29 @@
+.attendance-page{
+
+  .attendance-panel{
+    padding: 12px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+
+    &:not(:last-child){
+      margin-bottom: 12px;
+    }
+
+    .attendance-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      font-size: 21px;
+      width: 100%;
+    }
+
+    .attendance-content{
+      display: block;
+      padding: 4px 0;
+    }
+  }
+  p{
+    margin: 1px;
+  }
+}

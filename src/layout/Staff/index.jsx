@@ -4,7 +4,7 @@ import "./styles.scss";
 import { Route } from "react-router-dom";
 import CoursePage from "./Course";
 import Dashboard from "./Dashboard";
-import Enrollment from "./Enrollment";
+import Enrollment from "./Enrolment";
 import CourseDetail from "./Course/CourseDetail";
 
 class StaffDashboard extends Component {

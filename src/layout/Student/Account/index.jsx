@@ -199,7 +199,7 @@ class Account extends Component {
                       </span>
                     </div>
                     <div className="custom-file">
-                      <input type="file" className="custom-file-input" id="inputGroupFile01" accept="image/*" onChange={this.handleOnFileChange}/>
+                      <input type="file" className="custom-file-input" id="inputGroupFile01" accept="image/jpeg" onChange={this.handleOnFileChange}/>
                         <label className="custom-file-label"
                                htmlFor="inputGroupFile01">
                           {this.state.selectedProfileFile ? this.state.selectedProfileFile.name : "Choose profile picture..."}
@@ -237,7 +237,7 @@ class Account extends Component {
                             aria-disabled={this.state.selectedBiometricFile}>Upload</span>
                     </div>
                     <div className="custom-file">
-                      <input type="file" className="custom-file-input" onChange={this.handleOnBiometricFileChange} accept="image/*" id="inputGroupFile01"/>
+                      <input type="file" className="custom-file-input" onChange={this.handleOnBiometricFileChange} accept="image/jpeg" id="inputGroupFile01"/>
                       <label className="custom-file-label" htmlFor="inputGroupFile01">{this.state.selectedBiometricFile ? this.state.selectedBiometricFile.name : "Choose picture"}</label>
                     </div>
                   </div>
