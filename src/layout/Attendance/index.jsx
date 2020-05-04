@@ -43,7 +43,7 @@ class Attendance extends Component {
   };
 
   checkDate = getDate => {
-    return moment(getDate).isSameOrAfter(moment().format("YYYY-MM-DD HH:mm"))
+    return moment(getDate).isSameOrBefore(moment().format("YYYY-MM-DD HH:mm"))
   };
 
   render() {

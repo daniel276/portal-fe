@@ -20,7 +20,7 @@ class Attendance extends Component {
 
   componentDidMount() {
     const {id} = this.props.security.user;
-    this.props.getAttendanceByStudentId(id); // TODO CHANGE
+    this.props.getAttendanceByStudentId(id);
   }
 
   handleOpenToggle = id => e => {
